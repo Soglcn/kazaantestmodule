@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/browser-test-logo-BOiJ9rwS.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Belen&Partners - Kazaan</title>
+<<<<<<< HEAD
+  <script type="module" crossorigin src="./assets/index-kn2HSm8J.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bh8sYDTm.css">
+=======
+  <script type="module" crossorigin src="./assets/index-D2ys4wzO.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BSrnvD-K.css">
+>>>>>>> 2389a7579968db1eab3b8f375ac63228055c86a5
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div class="header-parts">
+                <div class="easy-access">
+                    <ul class="easy-access-buttons">
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-parts">
+                <div class="header-logo-section">
+                    <a href="index.html"><img src="./assets/test-logo-UqmnRqLZ.png" alt="Logo"></a>
+                </div>
+            </div>
+            <div class="header-parts">
+                <div class="menu-button-area">
+                    <button id="menu-icon"><i class="fa-solid fa-bars"></i></button>
+                    <script>
+                        document.getElementById("menu-icon").addEventListener("click", function () {
+                            var menu = document.querySelector(".menu");
+                            if (menu.style.display === "flex") {
+                                menu.style.display = "none";
+                                document.getElementById("menu-icon").innerHTML = '<i class="fa-solid fa-bars"></i>';
+                            } else {
+                                menu.style.display = "flex";
+                                document.getElementById("menu-icon").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--PROGRESS BAR PANEL-->
+    <div class="progress-container">
+        <div class="progress-bar" id="pageBar"></div>
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = ((height - winScroll) / height) * 100; 
+                document.getElementById("pageBar").style.height = scrolled + "%";
+            }
+        </script>
+    </div>
+
+    <!--MENU PANEL-->
+    <div class="menu">
+        <div class="menu-content">
+            <div class="menu-image-area">
+                <img src="./assets/menu-test-logo-D54O8Zt-.png" alt="MenuImage">
+            </div>
+            <div class="menu-items-area">
+                <h2>Menü</h2>
+                <ul class="menu-list-elements">
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                </ul>
+                <div class="menu-social-links">
+                    <ul class="menu-socials">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--LANGUAGE PANEL-->
+    <div class="language-panel">
+        <ul class="languages">
+            <li><a href="#">TR</a></li>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">FR</a></li>
+        </ul>
+    </div>
+
+    <!--MAIN PANEL-->
+    <div class="object-container">
+
+        <!--PANEL-BELOW-->
+        <div class="quick-change">
+            <div class="quick-button-area">
+                <div class="quick-button-area">
+                    <button class="btn-quicks" onclick="location.href='#'">btnTour</button>
+                    <button class="btn-quicks" onclick="location.href='#'">btnGallery</button>
+                </div>
+            </div>
+            <div class="change-language-area">
+                <button class="btn-language"><i class="fa-solid fa-globe"></i></button>
+                <script>
+                    document.querySelector(".btn-language").addEventListener("click", function () {
+                        var menu = document.querySelector(".language-panel");
+                        if (menu.style.display === "block") {
+                            menu.style.display = "none";
+                            document.querySelector(".btn-language").innerHTML = '<i class="fa-solid fa-globe"></i>';
+                        } else {
+                            menu.style.display = "block";
+                            document.querySelector(".btn-language").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+
+        <!--MODEL TEXT AREA-->
+        <div class="model-texts">
+            <div class="front-text-area">
+                <div class="scroll-the-page">
+                    <div class="inner-content">
+                        <div class="scroll-part">
+                            <p>kaydır</p>
+                        </div>
+                        <div class="scroll-part">
+                            <p><i class="fa-solid fa-angles-down"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="front-text-area">
+                <div class="section-alpha">
+                    <div class="section-alpha-left">
+                        <h2>Lorem Ipsum</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sint consectetur molestias?
+                            Temporibus, maiores perspiciatis!</h3>
+                        <p>Lorem Ipsum</p>
+                        <div class="section-alpha-image">
+                            <img src="./assets/test-image-DP6IaeAT.jpg" alt="">
+                        </div>
+                        <div class="section-alpha-image">
+                            <img src="./assets/test-image-2-DxCZbAnr.jpg" alt="">
+                        </div>
+                        <div class="section-alpha-image">
+                            <img src="./assets/test-image-3-eDPZ1y7y.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="front-text-area">
+                <div class="section-alpha">
+<<<<<<< HEAD
+                    <div class="section-alpha-right-2">
+=======
+                    <div class="section-alpha-left"></div>
+                    <div class="section-alpha-right">
+>>>>>>> 2389a7579968db1eab3b8f375ac63228055c86a5
+                        <h1>Lorem Ipsum Dolor Sit</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
+                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
+                            quidem voluptas odit!
+                            <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
+                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
+                            quidem voluptas odit!
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="front-text-area"><!--EMPTY--></div>
+            <div class="front-text-area">
+                <div class="section-alpha">
+<<<<<<< HEAD
+                    <div class="section-alpha-right"></div>
+=======
+                    <div class="section-alpha-left"></div>
+>>>>>>> 2389a7579968db1eab3b8f375ac63228055c86a5
+                    <div class="section-alpha-right">
+                        <h1>Lorem Ipsum Dolor Sit</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
+                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
+                            quidem voluptas odit!
+                            <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
+                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
+                            quidem voluptas odit!
+                        </h2>
+                    </div>
+                </div>
+            </div>
+<<<<<<< HEAD
+            <div class="front-text-area"><!--EMPTY--></div>
+=======
+>>>>>>> 2389a7579968db1eab3b8f375ac63228055c86a5
+        </div>
+
+        <!--BACKWARD-->
+        <div class="model-backward">
+            <img src="./assets/test-logo-UqmnRqLZ.png" alt="EngineLogo">
+        </div>
+
+        <!--3D Area-->
+        <div class="model-area">
+            <div class="model-viewer"></div>
+        </div>
+
+        <!--FRONT-->
+        <div class="main-container">
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements">
+                <div class="parallax-images">
+                    <div class="parallax-overlay">
+                        <h3>Lorem Ipsum</h3>
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque adipisci, voluptates
+                            dolorum architecto sequi harum consequatur nobis quaerat eveniet quas alias in. Quos, non.
+                        </p>
+                        <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
+                    </div>
+                    <img src="./assets/test-image-DP6IaeAT.jpg" alt="">
+                </div>
+            </div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements">
+                <div class="parallax-images">
+                    <div class="parallax-overlay">
+                        <h3>Lorem Ipsum</h3>
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque adipisci, voluptates
+                            dolorum architecto sequi harum consequatur nobis quaerat eveniet quas alias in. Quos, non.
+                        </p>
+                        <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
+                    </div>
+                    <img src="./assets/test-image-2-DxCZbAnr.jpg" alt="">
+                </div>
+            </div>
+            <div class="main-elements">
+                <div class="main-text-area">
+                    <div class="large-text-area">
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quia provident odio itaque
+                            repellat aperiam iure laborum at, ut eaque sit? Animi pariatur odit ducimus.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae fuga, rem in dicta
+                            inventore minus omnis dolorum, porro veritatis aliquid, natus aspernatur perferendis magnam
+                            modi.
+                        </p>
+                    </div>
+                    <div class="large-scale-image-container">
+                        <div class="large-scale-image">
+                            <img src="./assets/test-image-3-eDPZ1y7y.jpg" alt="Test Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements">
+                <div class="parallax-images">
+                    <div class="parallax-overlay">
+                        <h3>Lorem Ipsum</h3>
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque adipisci, voluptates
+                            dolorum architecto sequi harum consequatur nobis quaerat eveniet quas alias in. Quos, non.
+                        </p>
+                        <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
+                    </div>
+                    <img src="./assets/test-image-DP6IaeAT.jpg" alt="">
+                </div>
+            </div>
+            <div class="main-elements">
+                <div class="main-text-area">
+                    <div class="large-text-area">
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quia provident odio itaque
+                            repellat aperiam iure laborum at, ut eaque sit? Animi pariatur odit ducimus.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae fuga, rem in dicta
+                            inventore minus omnis dolorum, porro veritatis aliquid, natus aspernatur perferendis magnam
+                            modi.
+                        </p>
+                    </div>
+                    <div class="large-scale-image-container">
+                        <div class="large-scale-image">
+                            <img src="./assets/test-image-3-eDPZ1y7y.jpg" alt="Test Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<<<<<<< HEAD
+    <!--SOME WISHES AND HUMOR STARTS HERE-->
+    <noscript id="S-OGULCAN-666">
+        <!--
+        *********
+        cCc Dear MA'Rabb cCc
+        *********
+        Hi, it's me again! The guy you created to be an 
+        NPC in other people's lives. Well, clearly you don't like me, so 
+        Fenerbahçe couldn't win the cup again. WHY GOD, PLEASE WHY?
+        *********
+        Anyways... Thanks for the food (especially "mantı" but 
+        I have to follow my diet, so I can't eat it anymore), 
+        my career that doesn't make enough money 
+        but allows me to pay my bills and rent and also
+        some savings; we're also planning to go to Europe for vacati... 
+        Holly cow! I think it is actually some money huh? 
+        I never think 'bout it before tho.
+        *********
+        Nevermind; thanks for the gf who has cute ocean blue eyes 
+        (she's a total damn witch sometimes, but also cute af. Either way I'm in love), 
+        thanks for the family who are healthy and created a home for me to become a 
+        well-rounded adult, and thanks for the lots of beer/wine 
+        that I never drink again (I mean of course I'll drink but you know diet... 
+        Have to save six-packs).
+        *********
+        Oh the Mighty Bearded-One up on the skies... Please help me with codding 
+        this page again! (The help kinda like GIA; which isn't working well! THX-A-LOT!)
+        *********
+        Sincerely, 
+        *********
+        Your Cursed One, 
+        (who pisses u by listening crappy/horrible and satanic nu-metal songs)
+        *********
+        S.Oğulcan.  
+        *********
+        See ya! 
+        *********
+        -->
+    </noscript>    
+    <noscript id="SOME-FRIEND-FROM-OFFICE">
+        <!--I asked my friends in the office if anyone wanted to add something and someone sent a “manifest”. It's not mine.-->
+        <!--manifest*livinginabroadlondonhighestannuallsalaryvisualmanageratisticjobteaterfamousfriendslovelycoupleendlesshappinnessandsatisfiedinlifeandjobandrelationshipsloyaltyfortheoneandtomyselfinfintyrespectandlovetomylovefurkancemekecemcemekendlessbautyandselfloveforeachother*manifest-->
+    </noscript>
+    <!--SOME WISHES AND HUMOR ENDS HERE-->
+
+=======
+>>>>>>> 2389a7579968db1eab3b8f375ac63228055c86a5
+    <!--FOOTER PANEL-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-image">
+                <a href="#"><img src="./assets/test-logo-UqmnRqLZ.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-list">
+                <h2>Başlık 1</h2>
+                <ul class="footer-list-elements">
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                </ul>
+            </div>
+            <div class="footer-list">
+                <h2>Başlık 2</h2>
+                <ul class="footer-list-elements">
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                </ul>
+            </div>
+            <div class="footer-list">
+                <h2>Başlık 3</h2>
+                <ul class="footer-list-elements">
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                </ul>
+            </div>
+            <div class="footer-list">
+                <h2>Başlık 4</h2>
+                <ul class="footer-list-elements">
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                </ul>
+            </div>
+            <div class="footer-list">
+                <h2>Başlık 5</h2>
+                <ul class="footer-list-elements">
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                    <li><a href="#">Element 1</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-social-links">
+                <ul class="footer-socials">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-image-logo">
+                <a href="https://www.belenandpartners.com/"><img src="./assets/belen-logo-DM2QwDze.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
