@@ -24250,83 +24250,87 @@ sl.setDataType(un);
 
 
 
-let al = !1
-  , ol = !1
-  , cl = 0
-  , ll = 0;
-const hl = ()=>{
-    let r = Math.round(cl + ll)
-      , e = document.getElementById("loading-progress-bar")
-      , t = document.getElementById("loading-progress-text")
-      , n = document.querySelector(".loader")
-      , i = document.querySelector(".loader img");
-    e.style.width = `${r}%`,
-    t.textContent = `${r}%`,
-    n && (n.style.opacity = `${r}%`),
-    i && (i.style.opacity = `${r}%`),
-    console.log(r)
-	if (r >=100) {
-		return;
-	}
-}
-  , ul = ()=>{
-    al && ol && setTimeout(()=>{
-        const r = document.querySelector(".loader")
-          , e = document.querySelector(".loading-progress-container");
-        r.classList.add("fade-out"),
-        e.classList.add("fade-out");
-        const t = document.getElementById("loading-screen");
-        t.classList.add("fade-out"),
-        t.addEventListener("transitionend", ()=>{
-            t.style.display = "none"
-        }
-        )
+let hdrLoaded = false;
+let modelLoaded = false;
+let hdrProgress = 0;
+let modelProgress = 0;
+
+const hl = () => {
+    const totalProgress = Math.round(hdrProgress + modelProgress);
+    const progressBar = document.getElementById("loading-progress-bar");
+    const progressText = document.getElementById("loading-progress-text");
+    const loader = document.querySelector(".loader");
+    const loaderImg = document.querySelector(".loader img");
+
+    progressBar.style.width = `${totalProgress}%`;
+    progressText.textContent = `${totalProgress}%`;
+
+    // .loader ve .loader img'nin opacity'sini totalProgress'e göre ayarla
+    if (loader) {
+        loader.style.opacity = `${totalProgress}%`;
     }
-    , 100)
-}
-;
-sl.load("./assets/hdri-2.hdr", r=>{
-    r.mapping = kr,
-    ir.background = r,
-    ir.environment = r,
-    al = !0,
-    ul()
-}
-, r=>{
-    cl = r.loaded / r.total * 50,
-    hl()
-}
-, r=>{
-    console.error("Error loading HDR:", r)
-}
-);
+    if (loaderImg) {
+        loaderImg.style.opacity = `${totalProgress}%`;
+    }
+
+    console.log(totalProgress);
+};
+
+const ul = () => {
+    if (hdrLoaded && modelLoaded) {
+        const loader = document.querySelector(".loader");
+        const progressContainer = document.querySelector(".loading-progress-container");
+        loader.classList.add("fade-out");
+        progressContainer.classList.add("fade-out");
+
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.classList.add("fade-out");
+
+        loadingScreen.addEventListener("transitionend", () => {
+            loadingScreen.style.display = "none";
+        });
+
+        // Yükleme tamamlandığında yazdırmayı durdur
+        return;
+    }
+};
+
+sl.load("./assets/hdri-2.hdr", r => {
+    r.mapping = kr;
+    ir.background = r;
+    ir.environment = r;
+    hdrLoaded = true;
+    ul();
+}, r => {
+    hdrProgress = r.loaded / r.total * 50;
+    hl();
+}, r => {
+    console.error("Error loading HDR:", r);
+});
+
 const __ = new Ng;
 let Gs;
-__.load("./assets/TEST-MODEL-2.glb", r=>{
+__.load("./assets/TEST-MODEL-2.glb", r => {
     Gs = r.scene;
     const e = new es({
         color: 16777215,
         metalness: .15,
         roughness: .85
     });
-    Gs.traverse(t=>{
+    Gs.traverse(t => {
         t instanceof At && (t.material = e,
         t.castShadow = !0,
         t.receiveShadow = !0)
-    }
-    ),
-    ir.add(Gs),
-    ol = !0,
-    ul()
-}
-, r=>{
-    ll = r.loaded / r.total * 50,
-    hl()
-}
-, r=>{
-    console.error("Error loading model:", r)
-}
-);
+    });
+    ir.add(Gs);
+    modelLoaded = true;
+    ul();
+}, r => {
+    modelProgress = r.loaded / r.total * 50;
+    hl();
+}, r => {
+    console.error("Error loading model:", r);
+});
 
 
 
