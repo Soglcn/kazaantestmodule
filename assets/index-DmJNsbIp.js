@@ -24262,7 +24262,7 @@ const hl = () => {
     const loader = document.querySelector(".loader");
     const loaderImg = document.querySelector(".loader img");
 
-    progressBar.style.width = `${totalProgress}%`;
+    progressBar.style.width = `${Math.round(totalProgress / 2.35)}%`;
 	progressText.textContent = `${Math.round(totalProgress / 2.35)}%`;
 
 
@@ -24273,7 +24273,7 @@ const hl = () => {
         loaderImg.style.opacity = `${totalProgress}%`;
     }
 
-    console.log(totalProgress);
+    // console.log(totalProgress);
 };
 
 const ul = () => {
@@ -24290,7 +24290,6 @@ const ul = () => {
             loadingScreen.style.display = "none";
         });
 
-        // Yükleme tamamlandığında yazdırmayı durdur
         return;
     }
 };
