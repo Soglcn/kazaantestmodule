@@ -24256,14 +24256,14 @@ let hdrProgress = 0;
 let modelProgress = 0;
 
 const hl = () => {
-    const totalProgress = Math.round(hdrProgress + modelProgress);
+    const totalProgress = (hdrProgress + modelProgress) / 2 * 100; // İlerleme yüzdesini doğrudan yükleme miktarına oranlayın
     const progressBar = document.getElementById("loading-progress-bar");
     const progressText = document.getElementById("loading-progress-text");
     const loader = document.querySelector(".loader");
     const loaderImg = document.querySelector(".loader img");
 
     progressBar.style.width = `${totalProgress}%`;
-    progressText.textContent = `${totalProgress}%`;
+    progressText.textContent = `${Math.round(totalProgress) / 50}%`; // Yuvarlamayı burada yapabilirsiniz.
 
     // .loader ve .loader img'nin opacity'sini totalProgress'e göre ayarla
     if (loader) {
@@ -24275,6 +24275,7 @@ const hl = () => {
 
     console.log(totalProgress);
 };
+
 
 const ul = () => {
     if (hdrLoaded && modelLoaded) {
