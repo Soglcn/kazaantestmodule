@@ -24263,7 +24263,7 @@ const hl = () => {
     const loaderImg = document.querySelector(".loader img");
 
     progressBar.style.width = `${totalProgress}%`;
-    progressText.textContent = `${Math.round(totalProgress) / 50}%`; // Yuvarlamayı burada yapabilirsiniz.
+    progressText.textContent = `${(Math.round(totalProgress) / 50) / 2.35}%`; // Yuvarlamayı burada yapabilirsiniz.
 
     // .loader ve .loader img'nin opacity'sini totalProgress'e göre ayarla
     if (loader) {
