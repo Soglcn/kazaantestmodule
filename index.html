@@ -11,11 +11,23 @@
         integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Belen&Partners - Kazaan</title>
-  <script type="module" crossorigin src="./assets/index-kn2HSm8J.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bh8sYDTm.css">
+  <script type="module" crossorigin src="./assets/index-DmJNsbIp.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BrKcjPOR.css">
 </head>
 
 <body>
+
+    <!--LOADING PANEL-->
+    <div id="loading-screen">
+        <span id="loading-progress-text">0%</span>
+        <div class="loader">
+            <img src="./assets/test-logo-dark-C9KjiQkQ.png" alt="">
+        </div>
+        <div class="loading-progress-container">
+          <div id="loading-progress-bar"></div>
+        </div>
+      </div>
+
     <header>
         <div class="header-area">
             <div class="header-parts">
@@ -60,7 +72,7 @@
             function myFunction() {
                 var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = ((height - winScroll) / height) * 100; 
+                var scrolled = ((height - winScroll) / height) * 100;
                 document.getElementById("pageBar").style.height = scrolled + "%";
             }
         </script>
@@ -144,6 +156,8 @@
                     </div>
                 </div>
             </div>
+            <div class="front-text-area"><!--EMPTY--></div>
+            <div class="front-text-area"><!--EMPTY--></div>
             <div class="front-text-area">
                 <div class="section-alpha">
                     <div class="section-alpha-left">
@@ -157,24 +171,6 @@
                         <div class="section-alpha-image">
                             <img src="./assets/test-image-2-DxCZbAnr.jpg" alt="">
                         </div>
-                        <div class="section-alpha-image">
-                            <img src="./assets/test-image-3-eDPZ1y7y.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="front-text-area">
-                <div class="section-alpha">
-                    <div class="section-alpha-right-2">
-                        <h1>Lorem Ipsum Dolor Sit</h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
-                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
-                            quidem voluptas odit!
-                            <br><br>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
-                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
-                            quidem voluptas odit!
-                        </h2>
                     </div>
                 </div>
             </div>
@@ -196,6 +192,42 @@
                 </div>
             </div>
             <div class="front-text-area"><!--EMPTY--></div>
+            <div class="front-text-area"><!--EMPTY--></div>
+            <div class="front-text-area">
+                <div class="section-alpha">
+                    <div class="section-alpha-right">
+                    </div>
+                    <div class="section-alpha-left">
+                        <h2>Lorem Ipsum</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sint consectetur molestias?
+                            Temporibus, maiores perspiciatis!</h3>
+                        <p>Lorem Ipsum</p>
+                        <div class="section-alpha-image">
+                            <img src="./assets/test-image-DP6IaeAT.jpg" alt="">
+                        </div>
+                        <div class="section-alpha-image">
+                            <img src="./assets/test-image-2-DxCZbAnr.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="front-text-area"><!--EMPTY--></div>
+            <div class="front-text-area">
+                <div class="section-alpha">
+                    <div class="section-alpha-right"></div>
+                    <div class="section-alpha-right-2">
+                        <h1>Lorem Ipsum Dolor Sit</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
+                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
+                            quidem voluptas odit!
+                            <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consectetur fugit et
+                            corrupti explicabo repellendus praesentium, facilis eum atque fugiat perspiciatis officia
+                            quidem voluptas odit!
+                        </h2>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--BACKWARD-->
@@ -210,9 +242,12 @@
 
         <!--FRONT-->
         <div class="main-container">
-            <div class="main-elements"><!--EMPTY--></div>
-            <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements">
+                <div id="deneme">
+                    <h1>DENEME ALANI</h1>
+                </div>
+            </div>
+            <!-- <div class="main-elements">
                 <div class="parallax-images">
                     <div class="parallax-overlay">
                         <h3>Lorem Ipsum</h3>
@@ -222,25 +257,16 @@
                         </p>
                         <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
                     </div>
-                    <img src="./assets/test-image-DP6IaeAT.jpg" alt="">
+                    <img src="/src/images/test-image.jpg" alt="">
                 </div>
-            </div>
+            </div> -->
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
-            <div class="main-elements">
-                <div class="parallax-images">
-                    <div class="parallax-overlay">
-                        <h3>Lorem Ipsum</h3>
-                        <h1>Lorem ipsum dolor sit amet.</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque adipisci, voluptates
-                            dolorum architecto sequi harum consequatur nobis quaerat eveniet quas alias in. Quos, non.
-                        </p>
-                        <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
-                    </div>
-                    <img src="./assets/test-image-2-DxCZbAnr.jpg" alt="">
-                </div>
-            </div>
-            <div class="main-elements">
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <!-- <div class="main-elements">
                 <div class="main-text-area">
                     <div class="large-text-area">
                         <h1>Lorem ipsum dolor sit amet.</h1>
@@ -253,14 +279,16 @@
                     </div>
                     <div class="large-scale-image-container">
                         <div class="large-scale-image">
-                            <img src="./assets/test-image-3-eDPZ1y7y.jpg" alt="Test Image">
+                            <img src="/src/images/test-image-3.jpg" alt="Test Image">
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
-            <div class="main-elements">
+            <div class="main-elements"><!--EMPTY--></div>
+            <div class="main-elements"><!--EMPTY--></div>
+            <!-- <div class="main-elements">
                 <div class="parallax-images">
                     <div class="parallax-overlay">
                         <h3>Lorem Ipsum</h3>
@@ -270,9 +298,9 @@
                         </p>
                         <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
                     </div>
-                    <img src="./assets/test-image-DP6IaeAT.jpg" alt="">
+                    <img src="/src/images/test-image.jpg" alt="">
                 </div>
-            </div>
+            </div> -->
             <div class="main-elements">
                 <div class="main-text-area">
                     <div class="large-text-area">
@@ -332,7 +360,7 @@
         See ya! 
         *********
         -->
-    </noscript>    
+    </noscript>
     <noscript id="SOME-FRIEND-FROM-OFFICE">
         <!--I asked my friends in the office if anyone wanted to add something and someone sent a “manifest”. It's not mine.-->
         <!--manifest*livinginabroadlondonhighestannuallsalaryvisualmanageratisticjobteaterfamousfriendslovelycoupleendlesshappinnessandsatisfiedinlifeandjobandrelationshipsloyaltyfortheoneandtomyselfinfintyrespectandlovetomylovefurkancemekecemcemekendlessbautyandselfloveforeachother*manifest-->
