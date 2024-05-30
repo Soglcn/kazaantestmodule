@@ -24263,7 +24263,7 @@ const hl = () => {
     const loaderImg = document.querySelector(".loader img");
 
     progressBar.style.width = `${totalProgress}%`;
-	progressText.textContent = `${Math.round(totalProgress / 2.35)-1}%`;
+	progressText.textContent = `${Math.round(totalProgress / 2.35)}%`;
 
 
     if (loader) {
