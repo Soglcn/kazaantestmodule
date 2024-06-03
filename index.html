@@ -11,12 +11,11 @@
         integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Belen&Partners - Kazaan</title>
-  <script type="module" crossorigin src="./assets/index-DmJNsbIp.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BrKcjPOR.css">
+  <script type="module" crossorigin src="./assets/index-DVR0-TF4.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DOrMFyO-.css">
 </head>
 
 <body>
-
     <!--LOADING PANEL-->
     <div id="loading-screen">
         <span id="loading-progress-text">0%</span>
@@ -24,44 +23,123 @@
             <img src="./assets/test-logo-dark-C9KjiQkQ.png" alt="">
         </div>
         <div class="loading-progress-container">
-          <div id="loading-progress-bar"></div>
+            <div id="loading-progress-bar"></div>
         </div>
-      </div>
+    </div>
 
+    <!--HEADER-->
     <header>
-        <div class="header-area">
-            <div class="header-parts">
-                <div class="easy-access">
-                    <ul class="easy-access-buttons">
-                        <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header-parts">
-                <div class="header-logo-section">
-                    <a href="index.html"><img src="./assets/test-logo-UqmnRqLZ.png" alt="Logo"></a>
-                </div>
-            </div>
-            <div class="header-parts">
-                <div class="menu-button-area">
-                    <button id="menu-icon"><i class="fa-solid fa-bars"></i></button>
-                    <script>
-                        document.getElementById("menu-icon").addEventListener("click", function () {
-                            var menu = document.querySelector(".menu");
-                            if (menu.style.display === "flex") {
-                                menu.style.display = "none";
-                                document.getElementById("menu-icon").innerHTML = '<i class="fa-solid fa-bars"></i>';
-                            } else {
-                                menu.style.display = "flex";
-                                document.getElementById("menu-icon").innerHTML = '<i class="fa-solid fa-xmark"></i>';
-                            }
-                        });
-                    </script>
+        <div class="head-logo">
+            <a href="index.html">
+                <img src="./assets/test-logo-dark-C9KjiQkQ.png" alt="HeaderLogo">
+            </a>
+        </div>
 
-                </div>
-            </div>
+        <!--MENU BUTTON-->
+        <div class="menu-button" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <script>
+                function toggleMenu() {
+                    var menuButton = document.querySelector('.menu-button');
+                    menuButton.classList.toggle('menu-open');
+
+                    var lines = document.querySelectorAll('.line');
+                    lines.forEach(function (line) {
+                        line.classList.toggle('white');
+                    });
+
+                    var menuPanel = document.getElementById('menuPanel');
+                    if (menuPanel.style.display === 'flex') {
+                        menuPanel.style.height = '0px';
+                        setTimeout(function () {
+                            menuPanel.style.display = 'none';
+                        }, 500);
+                    } else {
+                        menuPanel.style.display = 'flex';
+                        setTimeout(function () {
+                            menuPanel.style.height = '100%';
+                        }, 10);
+                    }
+                    var logo = document.querySelector('.head-logo img');
+                    if (menuButton.classList.contains('menu-open')) {
+                        logo.style.opacity = 0;
+                        setTimeout(function () {
+                            logo.src = "./assets/src/images/test-logo.png";
+                            logo.style.opacity = 1;
+                        }, 500);
+                    } else {
+                        logo.style.opacity = 0;
+                        setTimeout(function () {
+                            logo.src = "./assets/src/images/test-logo-dark.png";
+                            logo.style.opacity = 1;
+                        }, 500);
+                    }
+                }
+
+
+            </script>
         </div>
     </header>
+
+    <!--MENU PANEL-->
+    <div class="openable-menu-panel" id="menuPanel">
+        <div class="menu-socials">
+            <a href="#" class="menu-social-buttons"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="menu-social-buttons"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="menu-social-buttons"><i class="fa-brands fa-x-twitter"></i></i></a>
+        </div>
+        <div class="menu-info">
+            <h3>Dört mevsim yaşam için tasarlanan Kazan Termal Otel ve Villalar, şehrin içinde, şehrin stresinden
+                uzakta, hayalini kurduğunuz huzur ve mutluluğu kendi has dünyasında barındırıyor.</h3>
+            <a href="#">
+                <h1>Belen & Partners</h1>
+            </a>
+        </div>
+        <div class="menu-links">
+            <a href="#" class="menu-link-panel">
+                <div class="text-wrapper">
+                    <h1>HAKKINDA</h1>
+                </div>
+                <div class="menu-image-overlay"></div>
+                <div class="image-wrapper">
+                    <img src="./assets/test-image-2-DxCZbAnr.jpg" alt="">
+                </div>
+            </a>
+            <a href="#" class="menu-link-panel">
+                <div class="text-wrapper">
+                    <h1>KATALOG</h1>
+                </div>
+                <div class="menu-image-overlay"></div>
+                <div class="image-wrapper">
+                    <img src="./assets/test-image-3-eDPZ1y7y.jpg" alt="">
+                </div>
+            </a>
+            <a href="#" class="menu-link-panel">
+                <div class="text-wrapper">
+                    <h1>GALERİ</h1>
+                </div>
+                <div class="menu-image-overlay"></div>
+                <div class="image-wrapper">
+                    <img src="./assets/test-image-DP6IaeAT.jpg" alt="">
+                </div>
+            </a>
+            <a href="#" class="menu-link-panel">
+                <div class="text-wrapper">
+                    <h1>İLETİŞİM</h1>
+                </div>
+                <div class="menu-image-overlay"></div>
+                <div class="image-wrapper">
+                    <img src="./assets/test-image-2-DxCZbAnr.jpg" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="menu-language">
+            <a href="index.html"><div class="language" id="selected"><h3>TR</h3></div></a>
+            <a href="#"><div class="language" id="others"><h3>EN</h3></div></a>
+            <a href="#"><div class="language" id="others"><h3>FR</h3></div></a>
+        </div>
+    </div>
 
     <!--PROGRESS BAR PANEL-->
     <div class="progress-container">
@@ -72,87 +150,20 @@
             function myFunction() {
                 var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = ((height - winScroll) / height) * 100;
+                var scrolled = (winScroll / height) * 100; // Değişiklik burada
                 document.getElementById("pageBar").style.height = scrolled + "%";
             }
+
         </script>
-    </div>
-
-    <!--MENU PANEL-->
-    <div class="menu">
-        <div class="menu-content">
-            <div class="menu-image-area">
-                <img src="./assets/menu-test-logo-D54O8Zt-.png" alt="MenuImage">
-            </div>
-            <div class="menu-items-area">
-                <h2>Menü</h2>
-                <ul class="menu-list-elements">
-                    <li><a href="#">Element 1</a></li>
-                    <li><a href="#">Element 1</a></li>
-                    <li><a href="#">Element 1</a></li>
-                    <li><a href="#">Element 1</a></li>
-                    <li><a href="#">Element 1</a></li>
-                </ul>
-                <div class="menu-social-links">
-                    <ul class="menu-socials">
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--LANGUAGE PANEL-->
-    <div class="language-panel">
-        <ul class="languages">
-            <li><a href="#">TR</a></li>
-            <li><a href="#">EN</a></li>
-            <li><a href="#">FR</a></li>
-        </ul>
     </div>
 
     <!--MAIN PANEL-->
     <div class="object-container">
-
-        <!--PANEL-BELOW-->
-        <div class="quick-change">
-            <div class="quick-button-area">
-                <div class="quick-button-area">
-                    <button class="btn-quicks" onclick="location.href='#'">btnTour</button>
-                    <button class="btn-quicks" onclick="location.href='#'">btnGallery</button>
-                </div>
-            </div>
-            <div class="change-language-area">
-                <button class="btn-language"><i class="fa-solid fa-globe"></i></button>
-                <script>
-                    document.querySelector(".btn-language").addEventListener("click", function () {
-                        var menu = document.querySelector(".language-panel");
-                        if (menu.style.display === "block") {
-                            menu.style.display = "none";
-                            document.querySelector(".btn-language").innerHTML = '<i class="fa-solid fa-globe"></i>';
-                        } else {
-                            menu.style.display = "block";
-                            document.querySelector(".btn-language").innerHTML = '<i class="fa-solid fa-xmark"></i>';
-                        }
-                    });
-                </script>
-            </div>
-        </div>
-
         <!--MODEL TEXT AREA-->
         <div class="model-texts">
             <div class="front-text-area">
                 <div class="scroll-the-page">
                     <div class="inner-content">
-                        <div class="scroll-part">
-                            <p>kaydır</p>
-                        </div>
-                        <div class="scroll-part">
-                            <p><i class="fa-solid fa-angles-down"></i></p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -232,7 +243,7 @@
 
         <!--BACKWARD-->
         <div class="model-backward">
-            <img src="./assets/test-logo-UqmnRqLZ.png" alt="EngineLogo">
+            <img src="./assets/test-logo-white-UqmnRqLZ.png" alt="EngineLogo">
         </div>
 
         <!--3D Area-->
@@ -247,60 +258,16 @@
                     <h1>DENEME ALANI</h1>
                 </div>
             </div>
-            <!-- <div class="main-elements">
-                <div class="parallax-images">
-                    <div class="parallax-overlay">
-                        <h3>Lorem Ipsum</h3>
-                        <h1>Lorem ipsum dolor sit amet.</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque adipisci, voluptates
-                            dolorum architecto sequi harum consequatur nobis quaerat eveniet quas alias in. Quos, non.
-                        </p>
-                        <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
-                    </div>
-                    <img src="/src/images/test-image.jpg" alt="">
-                </div>
-            </div> -->
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
-            <!-- <div class="main-elements">
-                <div class="main-text-area">
-                    <div class="large-text-area">
-                        <h1>Lorem ipsum dolor sit amet.</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quia provident odio itaque
-                            repellat aperiam iure laborum at, ut eaque sit? Animi pariatur odit ducimus.
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae fuga, rem in dicta
-                            inventore minus omnis dolorum, porro veritatis aliquid, natus aspernatur perferendis magnam
-                            modi.
-                        </p>
-                    </div>
-                    <div class="large-scale-image-container">
-                        <div class="large-scale-image">
-                            <img src="/src/images/test-image-3.jpg" alt="Test Image">
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
             <div class="main-elements"><!--EMPTY--></div>
-            <!-- <div class="main-elements">
-                <div class="parallax-images">
-                    <div class="parallax-overlay">
-                        <h3>Lorem Ipsum</h3>
-                        <h1>Lorem ipsum dolor sit amet.</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque adipisci, voluptates
-                            dolorum architecto sequi harum consequatur nobis quaerat eveniet quas alias in. Quos, non.
-                        </p>
-                        <button class="btn-mainLinks" id="btn-goOne" onclick="location.href='#'">btnGo</button>
-                    </div>
-                    <img src="/src/images/test-image.jpg" alt="">
-                </div>
-            </div> -->
             <div class="main-elements">
                 <div class="main-text-area">
                     <div class="large-text-area">
@@ -322,56 +289,11 @@
         </div>
     </div>
 
-    <!--SOME WISHES AND HUMOR STARTS HERE-->
-    <noscript id="S-OGULCAN-666">
-        <!--
-        *********
-        cCc Dear MA'Rabb cCc
-        *********
-        Hi, it's me again! The guy you created to be an 
-        NPC in other people's lives. Well, clearly you don't like me, so 
-        Fenerbahçe couldn't win the cup again. WHY GOD, PLEASE WHY?
-        *********
-        Anyways... Thanks for the food (especially "mantı" but 
-        I have to follow my diet, so I can't eat it anymore), 
-        my career that doesn't make enough money 
-        but allows me to pay my bills and rent and also
-        some savings; we're also planning to go to Europe for vacati... 
-        Holly cow! I think it is actually some money huh? 
-        I never think 'bout it before tho.
-        *********
-        Nevermind; thanks for the gf who has cute ocean blue eyes 
-        (she's a total damn witch sometimes, but also cute af. Either way I'm in love), 
-        thanks for the family who are healthy and created a home for me to become a 
-        well-rounded adult, and thanks for the lots of beer/wine 
-        that I never drink again (I mean of course I'll drink but you know diet... 
-        Have to save six-packs).
-        *********
-        Oh the Mighty Bearded-One up on the skies... Please help me with codding 
-        this page again! (The help kinda like GIA; which isn't working well! THX-A-LOT!)
-        *********
-        Sincerely, 
-        *********
-        Your Cursed One, 
-        (who pisses u by listening crappy/horrible and satanic nu-metal songs)
-        *********
-        S.Oğulcan.  
-        *********
-        See ya! 
-        *********
-        -->
-    </noscript>
-    <noscript id="SOME-FRIEND-FROM-OFFICE">
-        <!--I asked my friends in the office if anyone wanted to add something and someone sent a “manifest”. It's not mine.-->
-        <!--manifest*livinginabroadlondonhighestannuallsalaryvisualmanageratisticjobteaterfamousfriendslovelycoupleendlesshappinnessandsatisfiedinlifeandjobandrelationshipsloyaltyfortheoneandtomyselfinfintyrespectandlovetomylovefurkancemekecemcemekendlessbautyandselfloveforeachother*manifest-->
-    </noscript>
-    <!--SOME WISHES AND HUMOR ENDS HERE-->
-
     <!--FOOTER PANEL-->
     <footer>
         <div class="footer-content">
             <div class="footer-image">
-                <a href="#"><img src="./assets/test-logo-UqmnRqLZ.png" alt=""></a>
+                <a href="#"><img src="./assets/test-logo-white-UqmnRqLZ.png" alt=""></a>
             </div>
         </div>
         <div class="footer-content">
@@ -443,5 +365,46 @@
         </div>
     </footer>
 </body>
-
+    <!--SOME WISHES AND HUMOR-->
+    <noscript id="S-OGULCAN-666">
+        <!--
+        *********
+        cCc Dear MA'Rabb cCc
+        *********
+        Hi, it's me again! The guy you created to be an 
+        NPC in other people's lives. Well, clearly you don't like me, so 
+        Fenerbahçe couldn't win the cup again. WHY GOD, PLEASE WHY?
+        *********
+        Anyways... Thanks for the; food (especially "mantı" but 
+        I have to follow my diet, so I can't eat it anymore), 
+        my career that doesn't make enough money 
+        but allows me to pay my bills and rent and also
+        some savings; we're also planning to go to Europe for vacati... 
+        Holly cow! I think it is actually some money huh? 
+        I never think 'bout it before tho. Well, thanks for letting me 
+        stay alive. I guess??!?!
+        *********
+        Nevermind; thanks for the; gf who has cute ocean blue eyes 
+        (she's a total damn witch sometimes, but also cute af. Either way I'm in love), 
+        thanks for the family who are healthy and created a home for me to become a 
+        well-rounded adult, and thanks for the lots of beer/wine 
+        that I never drink again (I mean of course I'll drink but you know diet... 
+        Must to have six-packs now! (blinks happily), What'uuuup! Holly Five!!!
+        Seriously I have to stop watch HIMYM while I workin').
+        *********
+        Oh the Mighty Bearded Punisher For No Reason-One up on the skies... Please help me 
+        with codding this page like you did before too! (The help kinda 
+        like GIA; which isn't working well! THX-A-LOT!)
+        *********
+        Sincerely, 
+        *********
+        Your Cursed One, 
+        (who pisses u by listening crappy/horrible and satanic nu-metal songs)
+        *********
+        S.Oğulcan.  
+        *********
+        See ya! 
+        *********
+        -->
+    </noscript>
 </html>
